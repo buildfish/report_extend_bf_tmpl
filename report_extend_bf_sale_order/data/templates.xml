@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="tmpl_sale_order_001" model="ir.attachment">
+            <field name="name">Template_SO_001.odt</field>
+            <field name="datas_fname">Template_SO_001.odt</field>
+            <field name="res_model">ir.ui.view</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="report_extend_bf_sale_order/templates/tmpl_sale_order.odt"/>
+        </record>
+        <record id="tmpl_sale_order_002" model="ir.attachment">
+            <field name="name">Template_SO_002.odt</field>
+            <field name="datas_fname">Template_SO_002.odt</field>
+            <field name="res_model">ir.ui.view</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="report_extend_bf_sale_order/templates/tmpl_sale_order_02.odt"/>
+        </record>
+        <record id="tmpl_sale_order_003" model="ir.attachment">
+            <field name="name">Template_SO_003.odt</field>
+            <field name="datas_fname">Template_SO_003.odt</field>
+            <field name="res_model">ir.ui.view</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="report_extend_bf_sale_order/templates/tmpl_sale_order_03.odt"/>
+        </record>
+        <record id="tmpl_sale_order_004" model="ir.attachment">
+            <field name="name">Template_SO_004.odt</field>
+            <field name="datas_fname">Template_SO_004.odt</field>
+            <field name="res_model">ir.ui.view</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="report_extend_bf_sale_order/templates/tmpl_sale_order_04.odt"/>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <report 
+        id="action_report_my_sale_order"
+        model="sale.order"
+        string="My sale order"
+        report_type="controller"
+        name="MySaleOrder"
+        file="/report/download_document/MySaleOrder"/>
+        <record id="action_report_my_sale_order" model="ir.actions.report.xml">
+            <field name="template_id" ref="report_extend_bf_examples.sale_order_001"/>
+        </record>
+
+        <report 
+        id="action_report_hr_contract"
+        model="hr.contract"
+        string="Contract"
+        report_type="controller"
+        name="MyContract"
+        file="/report/download_document/MyContract"/>
+        <record id="action_report_hr_contract" model="ir.actions.report.xml">
+            <field name="template_id" ref="report_extend_bf_examples.hr_contract_001"/>
+        </record>
+
+        <report 
+        id="action_employee_photocheck"
+        model="hr.employee"
+        string="PhotoCheck"
+        report_type="controller"
+        name="PhotoCheck"
+        file="/report/download_document/PhotoCheck"/>
+        <record id="action_employee_photocheck" model="ir.actions.report.xml">
+            <field name="template_id" ref="report_extend_bf_examples.hr_employee_001"/>
+        </record>
+
+        <!-- Basic tmpl contact -->
+        <report 
+        id="report_basic_tmpl_contact"
+        model="res.partner"
+        string="Basic contact report"
+        report_type="controller"
+        name="ReportBasicContact"
+        file="/report/download_document/ReportBasicContact"/>
+        <record id="report_basic_tmpl_contact" model="ir.actions.report.xml">
+            <field name="template_id" ref="report_extend_bf_examples.report_basic_tmpl_contact_001"/>
+        </record>
+
+    </data>
+</openerp>

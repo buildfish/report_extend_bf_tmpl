@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Report Simple Account Invoice -->
+        <report id="action_report_my_account_invoice"
+            model="account.invoice"
+            string="Template Invoice"
+            report_type="controller"
+            name="MyAccountInvoice"
+            file="/report/download_document/MyAccountInvoice"/>
+        <record id="action_report_my_account_invoice" model="ir.actions.report.xml">
+            <field name="template_id" ref="report_extend_bf_account_invoice.account_invoice_001"/>
+            <field name="output_file">pdf</field>
+        </record>
+
+        <!-- Report Custom Account Invoice -->
+        <report id="action_report_my_account_invoice_custom"
+            model="account.invoice"
+            string="My Invoice Special Custom"
+            report_type="controller"
+            name="MyAccountInvoiceCustom"
+            file="/report/download_document/MyAccountInvoiceCustom"/>
+        <record id="action_report_my_account_invoice_custom" model="ir.actions.report.xml">
+            <field name="template_id" ref="report_extend_bf_account_invoice.account_invoice_002"/>
+            <field name="output_file">doc</field>
+        </record>
+    </data>
+</openerp>

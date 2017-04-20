@@ -1,1 +1,1 @@
-# report_extend_bf_tmpl
+### Sample templates for the report_extend_bf module

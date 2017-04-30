@@ -1,8 +1,7 @@
 ### Sample templates for the report_extend_bf module
+Depends module: report_extend_bf
 
 Create any objets report is easy with report_extend_bf
-
-
 Output formats:
 
     ODF Text Document [.odt]
@@ -13,9 +12,9 @@ Output formats:
 
 
 
-Depends module: report_extend_bf
-
+Example any objects
 account.invoice
+<img src="images_tmpls/img_01.png"/> <img src="images_tmpls/img_02.png"/>
 
 ![alt-text-1](images_tmpls/img_01.png "title-1") ![alt-text-2](images_tmpls/img_02.png "title-2")
 

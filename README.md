@@ -17,15 +17,15 @@ Depends module: report_extend_bf
 
 account.invoice
 
-![alt-text-1](images_tmpls/img_o1.png "title-1") ![alt-text-2](images_tmpls/img_o2.png "title-2")
+![alt-text-1](images_tmpls/img_01.png "title-1") ![alt-text-2](images_tmpls/img_02.png "title-2")
 
-![alt-text-1](images_tmpls/img_o4.png "title-1")
+![alt-text-1](images_tmpls/img_03.png "title-1")
 
 sale.order
 
-![alt-text-1](images_tmpls/img_o4.png "title-1") ![alt-text-2](images_tmpls/img_o5.png "title-2")
+![alt-text-1](images_tmpls/img_04.png "title-1") ![alt-text-2](images_tmpls/img_05.png "title-2")
 
-![alt-text-1](images_tmpls/img_o6.png "title-1") ![alt-text-2](images_tmpls/img_o7.png "title-2")
+![alt-text-1](images_tmpls/img_06.png "title-1") ![alt-text-2](images_tmpls/img_07.png "title-2")
 
 res.partner
 

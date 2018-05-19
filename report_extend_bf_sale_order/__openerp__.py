@@ -19,7 +19,7 @@
 
 {
     'name': 'Template Report Examples Sale Order & Quotation',
-    'description': 'Examples template report sale order & quotation',
+    'description': 'Examples template report sale order & quotation.',
     'summary': 'Template Report Examples Sale Order & Quotation.',
     'category': 'All',
     'version': '1.0',

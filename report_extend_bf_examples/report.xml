@@ -35,17 +35,5 @@
             <field name="template_id" ref="report_extend_bf_examples.hr_employee_001"/>
         </record>
 
-        <!-- Basic tmpl contact -->
-        <report 
-        id="report_basic_tmpl_contact"
-        model="res.partner"
-        string="Basic contact report"
-        report_type="controller"
-        name="ReportBasicContact"
-        file="/report/download_document/ReportBasicContact"/>
-        <record id="report_basic_tmpl_contact" model="ir.actions.report.xml">
-            <field name="template_id" ref="report_extend_bf_examples.report_basic_tmpl_contact_001"/>
-        </record>
-
     </data>
 </openerp>

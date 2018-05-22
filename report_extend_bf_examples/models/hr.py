@@ -8,7 +8,7 @@ from openerp import fields, models, api
 class hr_contract(models.Model):
     _inherit = "hr.contract"
 
-    def custom_report(self):
+    def custom_report(self, **kw):
         values = {
             "company": self.env.user.company_id
         }

@@ -3,6 +3,11 @@
 # For copyright and license notices, see __manifest__.py file in root directory
 ##############################################################################
 
-from . import models
+from odoo import fields, models
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+
+class Contract(models.Model):
+    _inherit = "hr.contract"
+
+    company_id = fields.Many2one(
+        'res.company', default=lambda self: self.env.user.company_id)

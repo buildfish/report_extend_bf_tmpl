@@ -8,7 +8,7 @@ from openerp import fields, models, api
 class sale_oder(models.Model):
     _inherit = "sale.order"
 
-    def custom_report(self):
+    def custom_report(self, **kw):
         obj_precision = self.env['decimal.precision']
         prec = obj_precision.precision_get('Account')
         lines = []

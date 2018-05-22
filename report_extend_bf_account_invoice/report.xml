@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
         <!-- Report Simple Account Invoice -->
         <report id="action_report_my_account_invoice"
             model="account.invoice"
-            string="Template Invoice"
+            string="My Invoice"
             report_type="controller"
             name="MyAccountInvoice"
             file="/report/download_document/MyAccountInvoice"/>
@@ -25,4 +25,4 @@
             <field name="output_file">doc</field>
         </record>
     </data>
-</openerp>
+</odoo>

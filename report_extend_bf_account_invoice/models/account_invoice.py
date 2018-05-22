@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-# For copyright and license notices, see __openerp__.py file in root directory
+# For copyright and license notices, see __manifest__.py file in root directory
 ##############################################################################
-from openerp import fields, models, api
+from odoo import fields, models, api
 
 
-class account_invoice(models.Model):
+class AccountInvoice(models.Model):
     _inherit = "account.invoice"
 
     # Extend custom report use this method custom_report
     # & return a dictionary values
-    def custom_report(self):
+    def custom_report(self, **kw):
         obj_precision = self.env['decimal.precision']
         prec = obj_precision.precision_get('Account')
         lines = []

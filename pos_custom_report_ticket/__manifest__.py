@@ -11,6 +11,7 @@
     'depends': [
         'report_extend_bf',
         "point_of_sale",
+        "l10n_pe_pos_consulta_dni_ruc",
     ],
     'data': [
         'data/templates.xml',

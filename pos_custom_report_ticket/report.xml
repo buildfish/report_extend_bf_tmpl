@@ -3,7 +3,7 @@
     <data>
         <report id="action_report_pos_ticket"
             model="pos.order"
-            string="Imprimir Ticket"
+            string="Imprimir Boleta"
             report_type="controller"
             name="ReportTicketPOS"
             file="/report/download_document/ReportTicketPOS"/>

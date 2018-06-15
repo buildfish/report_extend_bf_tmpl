@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="template_ticket" model="ir.attachment">
+            <field name="name">pos_ticket.odt</field>
+            <field name="datas_fname">pos_ticket.odt</field>
+            <field name="res_model">ir.ui.view</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="pos_custom_report_ticket/templates/pos_ticket.odt"/>
+        </record>
+    </data>
+</odoo>

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <report id="action_report_pos_ticket"
+        <!-- reemplaza el id de reporte estandar de factura desde
+            el tpv por el nuevo reporte perzonalizado -->
+        <report id="point_of_sale.pos_invoice_report"
             model="pos.order"
             string="Imprimir Boleta"
             report_type="controller"
             name="ReportTicketPOS"
             file="/report/download_document/ReportTicketPOS"/>
-        <record id="action_report_pos_ticket" model="ir.actions.report.xml">
+        <record id="point_of_sale.pos_invoice_report" model="ir.actions.report.xml">
             <field name="template_id" ref="pos_custom_report_ticket.template_ticket"/>
             <field name="output_file">docx</field>
         </record>

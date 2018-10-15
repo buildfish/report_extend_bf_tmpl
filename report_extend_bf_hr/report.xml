@@ -5,9 +5,8 @@
             model="hr.contract"
             string="Certificate"
             report_type="controller"
-            name="Certificate"
-            file="/report/download_document/Certificate"/>
-        <record id="action_report_hr_certificate" model="ir.actions.report.xml">
+            name="Certificate"/>
+        <record id="action_report_hr_certificate" model="ir.actions.report">
             <field name="template_id" ref="report_extend_bf_hr.certificate"/>
             <field name="output_file">pdf</field>
         </record>
@@ -17,9 +16,9 @@
             model="hr.contract"
             string="Employee contract"
             report_type="controller"
-            name="Contract"
-            file="/report/download_document/Contract"/>
-        <record id="action_employment_contract_template" model="ir.actions.report.xml">
+            print_report_name="'Contract - %s' % (object.name)"
+            name="Contract"/>
+        <record id="action_employment_contract_template" model="ir.actions.report">
             <field name="template_id" ref="report_extend_bf_hr.employment_contract_template"/>
             <field name="output_file">pdf</field>
         </record>

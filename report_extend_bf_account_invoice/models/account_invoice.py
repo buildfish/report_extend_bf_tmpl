@@ -2,7 +2,7 @@
 ##############################################################################
 # For copyright and license notices, see __manifest__.py file in root directory
 ##############################################################################
-from odoo import fields, models, api
+from odoo import models
 
 
 class AccountInvoice(models.Model):
@@ -10,7 +10,7 @@ class AccountInvoice(models.Model):
 
     # Extend custom report use this method custom_report
     # & return a dictionary values
-    def custom_report(self, **kw):
+    def custom_report(self):
         obj_precision = self.env['decimal.precision']
         prec = obj_precision.precision_get('Account')
         lines = []

@@ -28,12 +28,14 @@
     'author': 'BuildFish',
     'depends': [
         'report_extend_bf',
-        "account",
+        'account_invoicing'
     ],
     'data': [
         'data/templates.xml',
         'report.xml',
     ],
+    'price': 40.00,
+    'currency': 'EUR',
     'images': ['images/main_screenshot.png'],
     'application': True,
 }

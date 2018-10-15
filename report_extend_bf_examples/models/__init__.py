@@ -2,5 +2,5 @@
 ##############################################################################
 # For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
-import sale_order
+from . import sale_order
 from . import hr

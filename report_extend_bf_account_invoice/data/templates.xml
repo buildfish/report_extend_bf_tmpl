@@ -15,5 +15,12 @@
             <field name="type">binary</field>
             <field name="datas" type="base64" file="report_extend_bf_account_invoice/templates/account_invoice_custom.odt"/>
         </record>
+        <record id="account_invoice_003" model="ir.attachment">
+            <field name="name">ai_terms_conditions.odt</field>
+            <field name="datas_fname">ai_terms_conditions.odt</field>
+            <field name="res_model">ir.ui.view</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="report_extend_bf_account_invoice/templates/ai_terms_conditions.odt"/>
+        </record>
     </data>
 </odoo>

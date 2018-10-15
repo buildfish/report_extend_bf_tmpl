@@ -28,7 +28,7 @@
     'author': 'BuildFish',
     'depends': [
         'report_extend_bf',
-        'hr_contract',
+        "hr_contract",
     ],
     'data': [
         'data/templates.xml',

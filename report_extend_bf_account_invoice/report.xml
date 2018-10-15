@@ -4,11 +4,10 @@
         <!-- Report Simple Account Invoice -->
         <report id="action_report_my_account_invoice"
             model="account.invoice"
-            string="My Invoice"
+            string="Invoice basic"
             report_type="controller"
-            name="MyAccountInvoice"
-            file="/report/download_document/MyAccountInvoice"/>
-        <record id="action_report_my_account_invoice" model="ir.actions.report.xml">
+            name="MyAccountInvoice"/>
+        <record id="action_report_my_account_invoice" model="ir.actions.report">
             <field name="template_id" ref="report_extend_bf_account_invoice.account_invoice_001"/>
             <field name="output_file">pdf</field>
         </record>
@@ -16,13 +15,23 @@
         <!-- Report Custom Account Invoice -->
         <report id="action_report_my_account_invoice_custom"
             model="account.invoice"
-            string="My Invoice Special Custom"
+            string="My invoice special custom"
             report_type="controller"
-            name="MyAccountInvoiceCustom"
-            file="/report/download_document/MyAccountInvoiceCustom"/>
-        <record id="action_report_my_account_invoice_custom" model="ir.actions.report.xml">
+            name="MyAccountInvoiceCustom"/>
+        <record id="action_report_my_account_invoice_custom" model="ir.actions.report">
             <field name="template_id" ref="report_extend_bf_account_invoice.account_invoice_002"/>
             <field name="output_file">doc</field>
+        </record>
+
+        <!-- Report terms &amp; conditions -->
+        <report id="action_report_terms_conditions"
+            model="account.invoice"
+            string="Report terms &amp; conditions"
+            report_type="controller"
+            name="TermsConditions"/>
+        <record id="action_report_terms_conditions" model="ir.actions.report">
+            <field name="template_id" ref="report_extend_bf_account_invoice.account_invoice_003"/>
+            <field name="output_file">pdf</field>
         </record>
     </data>
 </odoo>

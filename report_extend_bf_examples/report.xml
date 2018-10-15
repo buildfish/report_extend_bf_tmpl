@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
 
         <report 
@@ -7,9 +7,9 @@
         model="sale.order"
         string="My sale order"
         report_type="controller"
-        name="MySaleOrder"
-        file="/report/download_document/MySaleOrder"/>
-        <record id="action_report_my_sale_order" model="ir.actions.report.xml">
+        print_report_name="'Sale - %s' % (object.name)"
+        name="MySaleOrder"/>
+        <record id="action_report_my_sale_order" model="ir.actions.report">
             <field name="template_id" ref="report_extend_bf_examples.sale_order_001"/>
         </record>
 
@@ -18,9 +18,9 @@
         model="hr.contract"
         string="Contract"
         report_type="controller"
-        name="MyContract"
-        file="/report/download_document/MyContract"/>
-        <record id="action_report_hr_contract" model="ir.actions.report.xml">
+        print_report_name="'Employee - %s' % (object.name)"
+        name="MyContract"/>
+        <record id="action_report_hr_contract" model="ir.actions.report">
             <field name="template_id" ref="report_extend_bf_examples.hr_contract_001"/>
         </record>
 
@@ -29,11 +29,11 @@
         model="hr.employee"
         string="PhotoCheck"
         report_type="controller"
-        name="PhotoCheck"
-        file="/report/download_document/PhotoCheck"/>
-        <record id="action_employee_photocheck" model="ir.actions.report.xml">
+        print_report_name="'Employee - %s' % (object.name)"
+        name="PhotoCheck"/>
+        <record id="action_employee_photocheck" model="ir.actions.report">
             <field name="template_id" ref="report_extend_bf_examples.hr_employee_001"/>
         </record>
 
     </data>
-</openerp>
+</odoo>

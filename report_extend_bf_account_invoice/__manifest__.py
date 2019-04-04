@@ -28,7 +28,7 @@
     'author': 'BuildFish',
     'depends': [
         'report_extend_bf',
-        'account_invoicing'
+        'account'
     ],
     'data': [
         'data/templates.xml',

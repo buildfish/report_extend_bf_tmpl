@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report id="action_report_contact"
+            model="res.partner"
+            string="Demo Partner Report"
+            report_type="controller"
+            name="Partner"
+            print_report_name="'Partner - %s' % (object.name)"/>
+        <record id="action_report_contact" model="ir.actions.report">
+            <field name="template_id" ref="report_extend_res_partner.basic_tmpl_res_partner"/>
+            <field name="output_file">doc</field>
+        </record>
+
+    </data>
+</odoo>

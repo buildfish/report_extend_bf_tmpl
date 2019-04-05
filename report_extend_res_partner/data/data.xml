@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="basic_tmpl_res_partner" model="ir.attachment">
+            <field name="name">basic_tmpl_contact.odt</field>
+            <field name="datas_fname">basic_tmpl_contact.odt</field>
+            <field name="res_model">ir.ui.view</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="report_extend_res_partner/templates/basic_tmpl_contact.odt"/>
+        </record>
+    </data>
+</odoo>

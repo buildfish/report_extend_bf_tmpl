@@ -2,7 +2,11 @@
 ##############################################################################
 # For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
+import pytz
+
 from odoo import models
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from datetime import datetime
 
 
 class SaleOrder(models.Model):
@@ -11,6 +15,17 @@ class SaleOrder(models.Model):
     def custom_report(self):
         obj_precision = self.env['decimal.precision']
         prec = obj_precision.precision_get('Account')
+
+        # Custom date format
+        lang = self._context.get("lang")
+        record_lang = self.env["res.lang"].search([("code", "=", lang)], limit=1)
+
+        strftime_format = "%s %s" % (record_lang.date_format, record_lang.time_format)
+
+        user_tz = pytz.timezone(self.env.context.get('tz') or self.env.user.tz or 'UTC')
+        dt = pytz.UTC.localize(datetime.strptime(self.date_order, DEFAULT_SERVER_DATETIME_FORMAT)).astimezone(user_tz)
+        date_order_2 = dt.strftime(strftime_format)
+
         lines = []
         for item in self.order_line:
             lines.append(
@@ -26,6 +41,7 @@ class SaleOrder(models.Model):
             "untaxed": format(self.amount_untaxed, '.%sf' % prec),
             "tax": format(self.amount_tax, '.%sf' % prec),
             "total": format(self.amount_total, '.%sf' % prec),
-            "symbol": self.pricelist_id.currency_id.symbol
+            "symbol": self.pricelist_id.currency_id.symbol,
+            "date_order_2": date_order_2
         }
         return values

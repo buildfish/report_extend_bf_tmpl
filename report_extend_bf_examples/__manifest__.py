@@ -34,6 +34,7 @@
     'data': [
         'data/templates.xml',
         'report.xml',
+        'views/sale_views.xml'
     ],
     'images': ['images/main_screenshot.png'],
     'application': True,

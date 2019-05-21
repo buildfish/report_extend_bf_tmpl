@@ -4,7 +4,7 @@
 ##############################################################################
 import pytz
 
-from odoo import models
+from odoo import models, api
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, DEFAULT_SERVER_DATE_FORMAT
 from datetime import datetime
 
@@ -23,11 +23,14 @@ class SaleOrder(models.Model):
         strftime_format = "%s %s" % (record_lang.date_format, record_lang.time_format)
         user_tz = pytz.timezone(self.env.context.get('tz') or self.env.user.tz or 'UTC')
 
-        date_order_dt = pytz.UTC.localize(datetime.strptime(self.date_order, DEFAULT_SERVER_DATETIME_FORMAT)).astimezone(user_tz)
-        date_order = date_order_dt.strftime(strftime_format)
-        
-        validity_date_dt = pytz.UTC.localize(datetime.strptime(self.validity_date, DEFAULT_SERVER_DATE_FORMAT)).astimezone(user_tz)
-        validity_date = validity_date_dt.strftime(strftime_format)
+        date_order = "- -"
+        validity_date = "- -"
+        if self.date_order:
+            date_order_dt = pytz.UTC.localize(datetime.strptime(self.date_order, DEFAULT_SERVER_DATETIME_FORMAT)).astimezone(user_tz)
+            date_order = date_order_dt.strftime(strftime_format)
+        if self.validity_date:
+            validity_date_dt = pytz.UTC.localize(datetime.strptime(self.validity_date, DEFAULT_SERVER_DATE_FORMAT)).astimezone(user_tz)
+            validity_date = validity_date_dt.strftime(strftime_format)
 
         lines = []
         for item in self.order_line:
@@ -49,3 +52,10 @@ class SaleOrder(models.Model):
             "validity_date": validity_date
         }
         return values
+
+    @api.multi
+    def action_print_sale(self):
+        self.ensure_one()
+        # Return tuple
+        # file = self.env.ref('report_extend_bf_examples.action_report_my_sale_order').sudo().render_any_docs([self.id])
+        return self.env.ref('report_extend_bf_examples.action_report_my_sale_order').report_action(self)

@@ -3,14 +3,12 @@
     <data>
         <record id="certificate" model="ir.attachment">
             <field name="name">certificate.odt</field>
-            <field name="datas_fname">certificate.odt</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">binary</field>
             <field name="datas" type="base64" file="report_extend_bf_hr/templates/certificate.odt"/>
         </record>
         <record id="employment_contract_template" model="ir.attachment">
             <field name="name">employment_contract_template.odt</field>
-            <field name="datas_fname">employment_contract_template.odt</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">binary</field>
             <field name="datas" type="base64" file="report_extend_bf_hr/templates/employment_contract_template.odt"/>

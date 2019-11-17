@@ -3,7 +3,7 @@
     <data>
         <!-- Report Simple Account Invoice -->
         <report id="action_report_my_account_invoice"
-            model="account.invoice"
+            model="account.move"
             string="Invoice basic"
             report_type="controller"
             name="MyAccountInvoice"/>
@@ -14,7 +14,7 @@
 
         <!-- Report Custom Account Invoice -->
         <report id="action_report_my_account_invoice_custom"
-            model="account.invoice"
+            model="account.move"
             string="My invoice special custom"
             report_type="controller"
             name="MyAccountInvoiceCustom"/>
@@ -25,7 +25,7 @@
 
         <!-- Report terms &amp; conditions -->
         <report id="action_report_terms_conditions"
-            model="account.invoice"
+            model="account.move"
             string="Report terms &amp; conditions"
             report_type="controller"
             name="TermsConditions"/>

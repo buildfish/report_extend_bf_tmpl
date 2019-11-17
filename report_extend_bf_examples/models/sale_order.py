@@ -25,8 +25,6 @@ class SaleOrder(models.Model):
 
         date_order = "- -"
         validity_date = "- -"
-        print(self.date_order)
-        print(type(self.date_order))
         if self.date_order:
             date_order_dt = pytz.UTC.localize(self.date_order).astimezone(user_tz)
             date_order = date_order_dt.strftime(strftime_format)
@@ -39,7 +37,7 @@ class SaleOrder(models.Model):
             lines.append(
                 {"product": item.name,
                  "qty": int(item.product_uom_qty),
-                 "image": item.product_id.image_medium,
+                 "image": item.product_id.image_128,
                  "price_unit": format(item.price_unit, '.%sf' % prec),
                  "tax": ', '.join(map(lambda x: (x.description or x.name), item.tax_id)),
                  "price_subtotal": format(item.price_subtotal, '.%sf' % prec),
@@ -55,7 +53,6 @@ class SaleOrder(models.Model):
         }
         return values
 
-    @api.multi
     def action_print_sale(self):
         self.ensure_one()
         return self.env.ref('report_extend_bf_examples.action_report_my_sale_order').report_action(self)

@@ -4,8 +4,9 @@
 ##############################################################################
 import logging
 import html
+import pytz
 
-from odoo import models, api
+from odoo import models, api, fields
 from odoo.tools import misc
 logger = logging.getLogger(__name__)
 try:
@@ -25,6 +26,19 @@ class SaleOrder(models.Model):
     _inherit = "sale.order"
 
     def custom_report(self):
+        lang = self._context.get("lang")
+        record_lang = self.env["res.lang"].search([("code", "=", lang)], limit=1)
+        strftime_format = "%s %s" % (record_lang.date_format, record_lang.time_format)
+        user_tz = pytz.timezone(self.env.context.get('tz') or self.env.user.tz or 'UTC')
+
+        def format_datetime(dt):
+            if dt:
+                return fields.Datetime.from_string(dt).replace(
+                    tzinfo=pytz.utc
+                ).astimezone(user_tz).strftime(strftime_format)
+            else:
+                return ''
+
         obj_precision = self.env['decimal.precision']
         prec = obj_precision.precision_get('Account')
         lines = []
@@ -44,7 +58,7 @@ class SaleOrder(models.Model):
             "tax": format(self.amount_tax, '.%sf' % prec),
             "total": format(self.amount_total, '.%sf' % prec),
             "symbol": self.pricelist_id.currency_id.symbol,
-            "date_order": misc.format_date(self.env, self.date_order, lang_code=self.env.user.lang),
+            "date_order": format_datetime(self.date_order),
             "validity_date": misc.format_date(self.env, self.validity_date, lang_code=self.env.user.lang),
         }
         return values

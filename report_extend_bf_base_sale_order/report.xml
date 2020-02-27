@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report 
+            id="action_report_offer_sale_order"
+            model="sale.order"
+            string="My Offer"
+            report_type="controller"
+            print_report_name="'Offer - %s' % (object.name)"
+            name="Offer"/>
+        <record id="action_report_offer_sale_order" model="ir.actions.report">
+            <field name="template_id" ref="report_extend_bf_base_sale_order.sale_order_offer"/>
+        </record>
+
+    </data>
+</odoo>

@@ -14,6 +14,39 @@
         </record>
 
         <report 
+        id="action_report_my_sale_order_02"
+        model="sale.order"
+        string="My sale order 02"
+        report_type="controller"
+        print_report_name="'Sale - %s' % (object.name)"
+        name="MySaleOrder02"/>
+        <record id="action_report_my_sale_order_02" model="ir.actions.report">
+            <field name="template_id" ref="report_extend_bf_examples.sale_order_002"/>
+        </record>
+
+        <report 
+        id="action_report_my_sale_order_03"
+        model="sale.order"
+        string="My sale order 03"
+        report_type="controller"
+        print_report_name="'Sale - %s' % (object.name)"
+        name="MySaleOrder03"/>
+        <record id="action_report_my_sale_order_03" model="ir.actions.report">
+            <field name="template_id" ref="report_extend_bf_examples.sale_order_003"/>
+        </record>
+
+        <report 
+        id="action_report_my_sale_order_04"
+        model="sale.order"
+        string="My sale order 04"
+        report_type="controller"
+        print_report_name="'Sale - %s' % (object.name)"
+        name="MySaleOrder04"/>
+        <record id="action_report_my_sale_order_04" model="ir.actions.report">
+            <field name="template_id" ref="report_extend_bf_examples.sale_order_004"/>
+        </record>
+
+        <report 
         id="action_report_hr_contract"
         model="hr.contract"
         string="Contract"

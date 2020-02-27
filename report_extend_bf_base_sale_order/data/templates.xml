@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_order_offer" model="ir.attachment">
+            <field name="name">sale_order_offer.odt</field>
+            <field name="datas_fname">sale_order_offer.odt</field>
+            <field name="res_model">ir.ui.view</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="report_extend_bf_base_sale_order/templates/sale_order_offer.odt"/>
+        </record>
+    </data>
+</odoo>

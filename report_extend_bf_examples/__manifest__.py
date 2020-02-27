@@ -29,7 +29,8 @@
     'depends': [
         'report_extend_bf',
         "sale",
-        "hr_contract"
+        "hr_contract",
+        "report_extend_bf_base_sale_order"
     ],
     'data': [
         'data/templates.xml',

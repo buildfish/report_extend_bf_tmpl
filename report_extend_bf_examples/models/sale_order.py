@@ -4,13 +4,23 @@
 ##############################################################################
 import pytz
 
-from odoo import models, api
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, DEFAULT_SERVER_DATE_FORMAT
-from datetime import datetime
+from odoo import models, fields
 
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
+
+    vat_label = fields.Char(related='company_id.vat_label')
+    vat_label_full = fields.Char(string='Vat label full', compute="_compute_vat_label")
+    # Temporal field
+    confirmation_date = fields.Datetime(string='Confirmation Date')
+
+    def _compute_vat_label(self):
+        for order in self:
+            order.vat_label_full = '%s: %s' % (order.vat_label, order.partner_id.vat) if order.partner_id.vat else ''
+    
+    def context_lang(self):
+        return self.partner_id.lang
 
     def custom_report(self):
         obj_precision = self.env['decimal.precision']
@@ -55,4 +65,18 @@ class SaleOrder(models.Model):
 
     def action_print_sale(self):
         self.ensure_one()
+        # Return tuple
+        # file = self.env.ref('report_extend_bf_examples.action_report_my_sale_order').sudo().render_any_docs([self.id])
+        #
+        # With data
+        # file = self.env.ref('report_extend_bf_examples.action_report_my_sale_order').sudo().render_any_docs([], data={'greeting': "Hello world"})
+        #
+        # With data
+        # return self.env.ref('report_extend_bf_examples.action_report_my_sale_order').report_action([], data={'greeting': "Hello world"})
         return self.env.ref('report_extend_bf_examples.action_report_my_sale_order').report_action(self)
+
+
+class SaleOrderLine(models.Model):
+    _inherit = "sale.order.line"
+
+    image_medium = fields.Binary(related='product_id.image_128')

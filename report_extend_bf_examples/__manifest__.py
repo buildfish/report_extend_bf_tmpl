@@ -29,6 +29,7 @@
     'depends': [
         'report_extend_bf',
         "sale",
+        "sale_management",
         "hr_contract"
     ],
     'data': [

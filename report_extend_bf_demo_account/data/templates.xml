@@ -5,19 +5,19 @@
             <field name="name">account_invoice.odt</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">binary</field>
-            <field name="datas" type="base64" file="report_extend_bf_account_invoice/templates/account_invoice.odt"/>
+            <field name="datas" type="base64" file="report_extend_bf_demo_account/templates/account_invoice.odt"/>
         </record>
         <record id="account_invoice_002" model="ir.attachment">
             <field name="name">account_invoice_custom.odt</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">binary</field>
-            <field name="datas" type="base64" file="report_extend_bf_account_invoice/templates/account_invoice_custom.odt"/>
+            <field name="datas" type="base64" file="report_extend_bf_demo_account/templates/account_invoice_custom.odt"/>
         </record>
         <record id="account_invoice_003" model="ir.attachment">
             <field name="name">ai_terms_conditions.odt</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">binary</field>
-            <field name="datas" type="base64" file="report_extend_bf_account_invoice/templates/ai_terms_conditions.odt"/>
+            <field name="datas" type="base64" file="report_extend_bf_demo_account/templates/ai_terms_conditions.odt"/>
         </record>
     </data>
 </odoo>

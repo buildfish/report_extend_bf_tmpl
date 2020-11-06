@@ -8,7 +8,7 @@
             report_type="controller"
             name="MyAccountInvoice"/>
         <record id="action_report_my_account_invoice" model="ir.actions.report">
-            <field name="template_id" ref="report_extend_bf_account_invoice.account_invoice_001"/>
+            <field name="template_id" ref="report_extend_bf_demo_account.account_invoice_001"/>
             <field name="output_file">pdf</field>
         </record>
 
@@ -19,7 +19,7 @@
             report_type="controller"
             name="MyAccountInvoiceCustom"/>
         <record id="action_report_my_account_invoice_custom" model="ir.actions.report">
-            <field name="template_id" ref="report_extend_bf_account_invoice.account_invoice_002"/>
+            <field name="template_id" ref="report_extend_bf_demo_account.account_invoice_002"/>
             <field name="output_file">doc</field>
         </record>
 
@@ -30,7 +30,7 @@
             report_type="controller"
             name="TermsConditions"/>
         <record id="action_report_terms_conditions" model="ir.actions.report">
-            <field name="template_id" ref="report_extend_bf_account_invoice.account_invoice_003"/>
+            <field name="template_id" ref="report_extend_bf_demo_account.account_invoice_003"/>
             <field name="output_file">pdf</field>
         </record>
     </data>

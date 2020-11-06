@@ -4,7 +4,7 @@
 ##############################################################################
 import pytz
 
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class SaleOrder(models.Model):
@@ -45,7 +45,8 @@ class SaleOrder(models.Model):
         lines = []
         for item in self.order_line:
             lines.append(
-                {"product": item.name,
+                {"product_id": item.product_id,
+                 "product": item.name,
                  "qty": int(item.product_uom_qty),
                  "image": item.product_id.image_128,
                  "price_unit": format(item.price_unit, '.%sf' % prec),
@@ -80,3 +81,15 @@ class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
 
     image_medium = fields.Binary(related='product_id.image_128')
+
+
+class ProductTemplate(models.Model):
+    _inherit = "product.template"
+
+    product_attributes = fields.Binary(string="Product Attributes",
+        compute='_compute_product_attributes')
+
+    @api.depends('product_variant_ids')
+    def _compute_product_attributes(self):
+        for p in self:
+            p.product_attributes = {'aa': "AA", "bb": "BB"}

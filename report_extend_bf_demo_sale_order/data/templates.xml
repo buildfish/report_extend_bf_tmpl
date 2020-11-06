@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="so_tmpl_demo_CleanSaleBlue" model="ir.attachment">
+            <field name="name">so_tmpl_demo_CleanSaleBlue.odt</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="report_extend_bf_demo_sale_order/templates/CleanSaleBlue.odt"/>
+        </record>
+        <record id="so_tmpl_demo_ElegantSaleBlue" model="ir.attachment">
+            <field name="name">so_tmpl_demo_ElegantSaleBlue.odt</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="report_extend_bf_demo_sale_order/templates/ElegantSaleBlue.odt"/>
+        </record>
+        <record id="so_tmpl_demo_modern_sale_green" model="ir.attachment">
+            <field name="name">so_tmpl_demo_modern_sale_green.odt</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="report_extend_bf_demo_sale_order/templates/ModernSaleGreen.odt"/>
+        </record>
+    </data>
+</odoo>

@@ -17,9 +17,8 @@
     'data': [
         'data/templates.xml',
         'report.xml',
-        'views/sale_views.xml'
     ],
-    'live_test_url': 'http://demo.odoo13.newgalax.com',
+    'live_test_url': 'http://demo.odoo14.newgalax.com',
     'images': ['static/description/banner.png'],
     'application': True,
 }

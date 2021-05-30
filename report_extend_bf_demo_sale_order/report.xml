@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report 
+            id="action_report_so_tmpl_demo_CleanSaleBlue"
+            model="sale.order"
+            string="Clean Sale Blue"
+            report_type="controller"
+            print_report_name="'Order - %s' % (object.name)"
+            name="CleanSaleBlue"/>
+        <record id="action_report_so_tmpl_demo_CleanSaleBlue" model="ir.actions.report">
+            <field name="template_id" ref="report_extend_bf_demo_sale_order.so_tmpl_demo_CleanSaleBlue"/>
+            <field name="url_theme_screenshot">report_extend_bf_demo_sale_order/static/src/img/clean_sale_blue.png</field>
+        </record>
+        <report 
+            id="action_report_so_tmpl_demo_ElegantSaleBlue"
+            model="sale.order"
+            string="Elegant Sale Blue"
+            report_type="controller"
+            print_report_name="'Order - %s' % (object.name)"
+            name="ElegantSaleBlue"/>
+        <record id="action_report_so_tmpl_demo_ElegantSaleBlue" model="ir.actions.report">
+            <field name="template_id" ref="report_extend_bf_demo_sale_order.so_tmpl_demo_ElegantSaleBlue"/>
+            <field name="url_theme_screenshot">report_extend_bf_demo_sale_order/static/src/img/elegant_sale_blue.png</field>
+        </record>
+        <report 
+            id="action_report_so_tmpl_demo_modern_sale_green"
+            model="sale.order"
+            string="Modern Sale Green"
+            report_type="controller"
+            print_report_name="'Order - %s' % (object.name)"
+            name="ModernSaleGreen"/>
+        <record id="action_report_so_tmpl_demo_modern_sale_green" model="ir.actions.report">
+            <field name="template_id" ref="report_extend_bf_demo_sale_order.so_tmpl_demo_modern_sale_green"/>
+            <field name="url_theme_screenshot">report_extend_bf_demo_sale_order/static/src/img/modern_sale_green.png</field>
+        </record>
+
+    </data>
+</odoo>

@@ -6,7 +6,7 @@
     'summary': 'Report Templates Demo Sale Order',
     'category': 'All',
     'version': '1.0',
-    'website': 'http://www.buildfish.com/',
+    'website': 'http://www.build-fish.com/',
     "license": "AGPL-3",
     'author': 'BuildFish',
     'depends': [
@@ -18,7 +18,7 @@
         'data/templates.xml',
         'report.xml',
     ],
-    'live_test_url': 'http://demo.odoo14.newgalax.com',
+    'live_test_url': 'http://report_extend_bf.odoo15.build-fish.com',
     'images': ['static/description/banner.png'],
     'application': True,
 }

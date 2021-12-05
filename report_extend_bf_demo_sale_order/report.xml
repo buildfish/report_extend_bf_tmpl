@@ -4,7 +4,7 @@
         <record model="ir.actions.report" id="action_report_so_tmpl_demo_CleanSaleBlue">
             <field name="name">Clean Sale Blue</field>
             <field name="model">sale.order</field>
-            <field name="report_type">controller</field>
+            <field name="report_libreoffice">True</field>
             <field name="report_name">CleanSaleBlue</field>
             <field name="print_report_name">(object.state in ('draft', 'sent') and 'Quotation - %s' % (object.name)) or 'Order - %s' % (object.name)</field>
             <field name="binding_model_id" ref="model_sale_order"/>
@@ -13,20 +13,21 @@
             <field name="url_theme_screenshot">report_extend_bf_demo_sale_order/static/src/img/clean_sale_blue.png</field>
         </record>
         <record model="ir.actions.report" id="action_report_so_tmpl_demo_ElegantSaleBlue">
-            <field name="name">Elegant Sale Blue</field>
+            <field name="name">Elegant Sale Blue (pdf)</field>
             <field name="model">sale.order</field>
-            <field name="report_type">controller</field>
+            <field name="report_libreoffice">True</field>
             <field name="report_name">ElegantSaleBlue</field>
             <field name="print_report_name">(object.state in ('draft', 'sent') and 'Quotation - %s' % (object.name)) or 'Order - %s' % (object.name)</field>
             <field name="binding_model_id" ref="model_sale_order"/>
             <field name="binding_type">report</field>
             <field name="template_id" ref="report_extend_bf_demo_sale_order.so_tmpl_demo_ElegantSaleBlue"/>
             <field name="url_theme_screenshot">report_extend_bf_demo_sale_order/static/src/img/elegant_sale_blue.png</field>
+            <field name="output_file">pdf</field>
         </record>
         <record model="ir.actions.report" id="action_report_so_tmpl_demo_modern_sale_green">
             <field name="name">Modern Sale Green</field>
             <field name="model">sale.order</field>
-            <field name="report_type">controller</field>
+            <field name="report_libreoffice">True</field>
             <field name="report_name">ModernSaleGreen</field>
             <field name="print_report_name">(object.state in ('draft', 'sent') and 'Quotation - %s' % (object.name)) or 'Order - %s' % (object.name)</field>
             <field name="binding_model_id" ref="model_sale_order"/>

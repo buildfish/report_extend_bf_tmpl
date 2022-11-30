@@ -11,6 +11,7 @@
     'author': 'BuildFish',
     'depends': [
         'report_extend_bf',
+        'report_extend_bf_sale_base',
         "sale",
         "sale_management",
     ],

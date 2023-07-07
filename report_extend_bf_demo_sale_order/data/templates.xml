@@ -16,5 +16,10 @@
             <field name="type">binary</field>
             <field name="datas" type="base64" file="report_extend_bf_demo_sale_order/templates/ModernSaleGreen.odt"/>
         </record>
+        <record id="so_tmpl_demo_SaleOrderOptionalProducts" model="ir.attachment">
+            <field name="name">so_tmpl_demo_SaleOrderOptionalProducts.odt</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="report_extend_bf_demo_sale_order/templates/SaleOrderOptionalProducts.odt"/>
+        </record>
     </data>
 </odoo>
